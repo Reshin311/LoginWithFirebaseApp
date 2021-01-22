@@ -62,6 +62,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5451B00125BA2D4400292114 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5451B00225BA2D6A00292114 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
 		547B30E625B12A3B00D3EAA1 = {
 			isa = PBXGroup;
 			children = (
@@ -83,15 +97,17 @@
 		547B30F125B12A3B00D3EAA1 /* LoginWithFiewbaseApp */ = {
 			isa = PBXGroup;
 			children = (
+				5451B00225BA2D6A00292114 /* StoryBoards */,
+				5451B00125BA2D4400292114 /* Controllers */,
 				547B30F225B12A3B00D3EAA1 /* AppDelegate.swift */,
 				547B30F425B12A3B00D3EAA1 /* SceneDelegate.swift */,
-				547B30F625B12A3B00D3EAA1 /* ViewController.swift */,
-				547B30F825B12A3B00D3EAA1 /* Main.storyboard */,
 				547B31B425B5D0E100D3EAA1 /* Home.storyboard */,
-				547B31B725B5D3EB00D3EAA1 /* HomeViewController.swift */,
-				54AD3ED625B714600016948D /* LoginViewController.swift */,
+				547B30F825B12A3B00D3EAA1 /* Main.storyboard */,
 				54AD3ED325B7125F0016948D /* Login.storyboard */,
 				547B310A25B16B8900D3EAA1 /* UIColor-Extension.swift */,
+				547B31B725B5D3EB00D3EAA1 /* HomeViewController.swift */,
+				54AD3ED625B714600016948D /* LoginViewController.swift */,
+				547B30F625B12A3B00D3EAA1 /* ViewController.swift */,
 				547B310E25B2368500D3EAA1 /* GoogleService-Info.plist */,
 				547B30FB25B12A4000D3EAA1 /* Assets.xcassets */,
 				547B30FD25B12A4000D3EAA1 /* LaunchScreen.storyboard */,
