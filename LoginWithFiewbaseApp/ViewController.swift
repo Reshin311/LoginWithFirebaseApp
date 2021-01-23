@@ -48,7 +48,6 @@ class ViewController: UIViewController {
             guard let email = emailTextField.text else { return }
             guard let password = passwordTextField.text else { return }
          
-    
             Auth.auth().createUser(withEmail: email, password: password) { [self] (res,err) in
         
              if let err = err {
@@ -60,7 +59,6 @@ class ViewController: UIViewController {
                 return
        }
                 self.addUserInfoToFirestore(email: email)
-        
             }
         }
    
@@ -111,6 +109,7 @@ class ViewController: UIViewController {
         
    }
     private func presentToHomeViewController(user: User) {
+                    //どのstoryboardに遷移するか
                     let storyBoard = UIStoryboard(name: "Home", bundle: nil)
                     let homeViewController = storyBoard.instantiateViewController(identifier: "HomeViewController") as! HomeViewController
                     homeViewController.user = user
@@ -151,10 +150,11 @@ class ViewController: UIViewController {
     
     
     
-
+// キーボードが出てきた時の処理
     @objc func showKeyboard(notification: Notification) {
         let keyboardFrame = (notification.userInfo![UIResponder.keyboardFrameEndUserInfoKey] as AnyObject).cgRectValue
-        
+ 
+// キーボードが出てきた時にビューを調整する
         guard let keyboardMinY = keyboardFrame?.minY else { return }
         let registerButtonMaxY = registerButton.frame.maxY
         let distance = registerButtonMaxY - keyboardMinY + 20
@@ -173,13 +173,14 @@ class ViewController: UIViewController {
     
     }
     
-    
+// 画面をタッチするとキーボードが消える
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
     
 }
 
+//　各入力項目が空白の場合レジスターボタンが押せないようにする
 extension ViewController: UITextFieldDelegate {
     
     func textFieldDidChangeSelection(_ textField: UITextField) {

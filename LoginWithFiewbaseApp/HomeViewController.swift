@@ -85,8 +85,8 @@ class HomeViewController: UIViewController {
     private func dateFormatterForCreatedAt(date: Date) -> String {
         let formatter = DateFormatter()
         formatter.dateStyle = .long
-        formatter.timeStyle = .long
-        formatter.locale = Locale(identifier: "jp_Jp")
+        formatter.timeStyle = .none
+        formatter.locale = Locale(identifier: "ja_Jp")
         return formatter.string(from: date)
      
     }
